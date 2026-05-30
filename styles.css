@@ -344,7 +344,62 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
 .wwm-block ul li .mark { background: var(--highlight); padding: 1px 4px; border-radius: 3px; color: var(--fg); }
 @media (max-width: 760px) { .wwm { grid-template-columns: 1fr; gap: 36px; } }
 
-/* ---------- Testimonials ---------- */
+/* ---------- Building with AI ---------- */
+.bw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 4px;
+}
+.bw-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 26px 28px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.bw-head { display: flex; flex-direction: column; gap: 8px; }
+.bw-tag {
+  align-self: flex-start;
+  font-family: var(--mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--fg-3);
+  padding: 3px 8px; border-radius: 999px;
+  border: 1px solid var(--rule-2);
+  background: var(--bg-2);
+}
+.bw-tag.bw-live { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.bw-card h3 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 26px; letter-spacing: -0.015em;
+  margin: 4px 0 0;
+}
+.bw-pitch { color: var(--fg-2); margin: 0; font-size: 15.5px; line-height: 1.5; }
+.bw-bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.bw-bullets li {
+  position: relative; padding-left: 20px;
+  color: var(--fg-2); line-height: 1.55; font-size: 14.5px;
+}
+.bw-bullets li::before {
+  content: "→"; position: absolute; left: 0; top: 0;
+  color: var(--accent); font-family: var(--mono);
+}
+.bw-bullets li strong { color: var(--fg); font-weight: 500; }
+.bw-foot {
+  margin-top: auto; padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.bw-stack { font-family: var(--mono); font-size: 11.5px; color: var(--fg-3); }
+.bw-link {
+  font-family: var(--mono); font-size: 12.5px; color: var(--accent);
+  white-space: nowrap;
+}
+.bw-link:hover { text-decoration: underline; }
+.bw-note { margin-top: 24px; color: var(--fg-3); font-size: 14px; font-style: italic; }
+@media (max-width: 760px) { .bw-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Testimonials (deprecated, retained for legacy) ---------- */
 .tstm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .tstm {
   border: 1px solid var(--rule);
